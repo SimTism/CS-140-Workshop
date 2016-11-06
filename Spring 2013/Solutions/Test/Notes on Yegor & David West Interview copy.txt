@@ -1,3 +1,5 @@
+Just a test
+
 - Smalltalk “died” because of Java due to licensing and business issues
 
 - Xerox didn’t want to give Apple license to Smalltalk, otherwise they would gain ownership.  So Apple came up with Object Pascal?
