@@ -1,0 +1,49 @@
+- Smalltalk “died” because of Java due to licensing and business issues
+
+- Xerox didn’t want to give Apple license to Smalltalk, otherwise they would gain ownership.  So Apple came up with Object Pascal?
+
+- Smalltalk mainly in Europe now as Squeak
+
+- Agile founders understood objects, so they assumed others would as well, but that wasn’t the case.  Instead, other people continued to focus on data.
+
+- Java also killed object-orientation
+
+- Messages took more cycles, but this could be bypassed with method invocation.  Java did the latter, and it was sold as object-oriented at the programming level (marketing scam).
+
+- Object-orientation needs to be applied at hardware level as well to.  Otherwise, arguments against Smalltalk and performance are just half-baked cakes.
+
+- Functional programming works well closer to hardware, but higher up requires object-orientation.  Can’t really express reality in functions, because in reality, everything is an object in relationship with other objects (implicit messages).  This goes back to FP being orthogonal with OOP.
+
+- However, despite the need for a hardware revamp, Smalltalk can be used for time-performant systems (sometimes with little tricks?) (Done with jet fighters and power-switching systems that required nano/pico second time budgets).  These systems can also be done in less time.  2 months to write/prove system + 2 weeks to optimize in Smalltalk, or take 8 weeks using C++.  Your choice.
+
+- People complain about spaghetti objects.  They’re really complaining about their inability to design systems well.
+
+- When working in Smalltalk, can look like procedural code, because have to follow all the messages.  It appears you lose yourself in messages, that you don’t have any control, but the benefit is that it becomes a whole lot easier to write the program, and it requires a significantly fewer lines of code.  Based on no centers design.  No controllers, which is what leads to all the complexity.
+
+- On classes - Java = no choice but to write classes - Classes = easier way to change things in one place - Where do objects come from? … C++ = factory … Smalltalk = class has template for creating new objects = class methods = bad = other people follow suit = taking things that should be in objects and putting them in the class itself = bad again! - There’s almost always another design alternatives that solves the problem. - If you build a 500-story building, you better have a fast elevator, but is the 500-story building the right solution to your problem? - So rather than have class methods that handle the dance between complex and probably poorly designed components, find another better and right way to handle it.
+
+- On operating systems - Computers are just a collection of components - Don’t need an operating systems telling me to do something - If you look at the behaviors of the components of the computer, and give them all the distributed capabilities, an OS becomes a couple thousand lines of code.  Don’t need a master controller for an OS.
+
+- Balance between performance and design?  People always say you need performance, that they don’t need the OO bullcrap, that it’s just a computer, so just program to the computer.  Who cares about this design OO crap - If you’re programming something once, then that’s correct, but who writes a program that won’t be changed?  There isn’t anything program that’s of legitimate value that is a one-off.  It needs to be maintained. - 
+
+- Performance always comes last.  This is traced back to 1970s, when software engineering was invented, and is where this mindset originated.  You do your design, optimize your design, all design things until you make your program work, and then you figure out how to make your program faster if needed.  Ultimate, what matters is the design, and this fits the human mind’s mental model.  This helps with maintainability.
+
+- Why spend time optimizing for a computer that’s going to be obsolete relatively quickly.  With new tech, just move your design to the new tech, and re-optimize for the new tech.  This is a small task, as opposed to pre-optimization
+
+- Software developer consequences (peer-to-peer review) = reputation
+
+- OO imperative or declarative? - Neither - In a category by itself.  Depends on the kinds of messages you send it.  You can send an imperative message to an object (setter is an example).  Seems like OO is just an abstract view on complex systems on which the foundations are messages, isolation, and late-binding.  This foundation can be made to look like any kind of programming style you want.  You can have a master controller (imperative, interrogative, declarative, etc.)
+
+- Imperative programming good for one-offs
+
+- Integration b/w OO and FP … Functions are first-class citizens. Right direction? - Might be a necessary thing.  Certainly nothing new.  Java intentionally designed to include things from Smalltalk and C, so Java was a hybrid right then - Ruby intended to emulate Java, C, and Smalltalk (or from the other talk on YouTube, Smalltalk, Lisp, and Perl for scripting) - Reason being that you need a toolkit.  If you need functions, you should be able to use a function.  If you need a class or an object, you should be able to use it.  You do need different tools for different circumstances, and it’s more efficient for a programmer if integrated into single language.  Problem is psychological.  If you started off in programming with language x, and now you’re in another language that uses x, y, and z, then you’re just going to use the language of x because you’re more familiar with that instead of also using y and z. - Therefore, you see Ruby programmers writing Java in Ruby.
+
+- Move FP into OO, so we’re losing idea of objects - As a language designer, have to compromise between what you want to say, and what the computer allows you to do.  So whenever you’re designing a language, need to design one that the computer can understand, and also the human can understand while retaining meaning.
+
+- Apply reality to C vs. apply reality to Smalltalk - Language needs to assist developer in expressing real world into code - Smalltalk has a good model for this - Functional programming language has a model that’s based on mathematics (lambda calculus) - Model must assist in translation, so different translations require different models
+
+- If hard to make translation because model doesn’t fit very well - Great example of this is relational databases - Boolean algebra not the way humans naturally think - Inefficient, and trillions of dollars spend to improve this - Need to normalize just to get DB to run in real time —— Same can be said of programming language - If programming language model doesn’t match that of humans, you’re not solving the right problem
+
+- On inheritance - Can look at different ways - One is a taxonomical structure - Bad way is to create a taxonomy based on data - Good way is to create a taxonomy based on behavior
+
+- Immutability - Show me anything in the world that doesn’t change - An object should still be the same object, but can provide info about itself at a particular time (and something about reflection at around 19:15 in part 2) - Reflection means an object should know things about itself - e.g. If you want to identify a Book, you send a message to Book, and it uses reflection on itself to identify itself
